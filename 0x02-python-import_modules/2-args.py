@@ -1,24 +1,18 @@
 #!/usr/bin/python3
-# 2-args.py
-# Haruna Danladi Maina <westamder32@gmail.com>
+if __name__ == '__main__':
+    import sys
 
-import sys
+    sys.argv.pop(0)
+    argvlength = len(sys.argv)
 
-if __name__ != "__main__":
-    exit()
-
-argStr = "{:d} argument"
-argc = len(sys.argv) - 1
-if argc == 0:
-    argStr += 's.'
-elif argc == 1:
-    argStr += ':'
-else:
-    argStr += 's:'
-print(argStr.format(argc))
-
-i = 0
-for arg in sys.argv:
-    if i != 0:
-        print("{:d}: {:s}".format(i, arg))
-    i += 1
+    if (argvlength == 0):
+        print("0 arguments.")
+    elif (argvlength == 1):
+        print("1 argument:")
+        print("{:d}: {}".format(len(sys.argv), sys.argv[0]))
+    else:
+        print("{:d} arguments:".format(argvlength))
+        number = 1
+        for argument in sys.argv:
+                print("{:d}: {}".format(number, argument))
+                number += 1
