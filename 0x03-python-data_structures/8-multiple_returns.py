@@ -2,7 +2,6 @@
 # 8-multiple_returns.py
 # Haruna Danladi Maina <westamder32@gmail.com>
 
-
 def multiple_returns(sentence):
     """Returns the length of a string and its first character."""
     if sentence == "":

@@ -1,9 +1,3 @@
-/*
- * File: File: 13-is_palindrome.c
- * Auth: Haruna Danladi Maina
- */
-
-
 #include "lists.h"
 
 listint_t *reverse_listint(listint_t **head);
