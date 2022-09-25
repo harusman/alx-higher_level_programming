@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
-    import sys
+if __name__ == "__main__":
+    from sys import argv
+    ac = len(argv) - 1
 
-    sys.argv.pop(0)
-    argvlength = len(sys.argv)
+    print(ac, end=" ")
 
-    if (argvlength == 0):
-        print("0 arguments.")
-    elif (argvlength == 1):
-        print("1 argument:")
-        print("{:d}: {}".format(len(sys.argv), sys.argv[0]))
+    if ac == 1:
+        print("argument", end="")
     else:
-        print("{:d} arguments:".format(argvlength))
-        number = 1
-        for argument in sys.argv:
-                print("{:d}: {}".format(number, argument))
-                number += 1
+        print("arguments", end="")
+
+    if ac == 0:
+        print(".")
+    else:
+        print(":")
+
+    for i in range(1, ac + 1):
+        print("{:d}: {}".format(i, argv[i]))
