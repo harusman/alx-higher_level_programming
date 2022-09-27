@@ -1,2 +1,6 @@
 #!/usr/bin/python3
-__import__("os").write(1, "#pythoniscool\n".encode("UTF-8"))
+def element_at(my_list, idx):
+if idx < 0 or idx >= len(my_list):
+return None
+else:
+return my_list[idx]
